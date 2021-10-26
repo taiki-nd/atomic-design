@@ -3,6 +3,9 @@ import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import "./styles.css";
 import { SerachInput } from "./components/molecures/SearchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
+import { HeaderOnly } from "./components/templetes/HeaderOnly";
+import { BrowserRouter } from "react-router-dom";
+import { DefaulyLayout } from "./components/templetes/DefaultLayout";
 
 const user = {
   name: "kii",
@@ -17,12 +20,14 @@ const user = {
 
 export default function App() {
   return (
-    <div className="App">
-      <PrimaryButton>test</PrimaryButton>
-      <SecondaryButton>検索</SecondaryButton>
-      <br />
-      <SerachInput />
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <DefaulyLayout>
+        <PrimaryButton>test</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
+        <br />
+        <SerachInput />
+        <UserCard user={user} />
+      </DefaulyLayout>
+    </BrowserRouter>
   );
 }

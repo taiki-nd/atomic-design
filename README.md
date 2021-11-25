@@ -1,2 +1,2 @@
 # atomic-design
-Created with CodeSandbox
+atomicデザインに関するリポジトリ
